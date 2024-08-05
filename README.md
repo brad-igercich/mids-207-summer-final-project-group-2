@@ -28,3 +28,23 @@ iSchool Google Drive Link: https://docs.google.com/presentation/d/151mlOsWOUO0_-
   * Scan orientation
 
 ### **Modeling:**
+* Baseline
+  * 2D layers?
+* Improvement over Baseline
+  * Improvement on the Baseline
+  * Try one-hot encoding instead of label encoding; try cross-validation
+  * CNN/Transformer Model (combine two different models; Ensemble - multiple algorithms that deliver different answers but identify patterns in consistent answers; are they limited to Decision Forests or can be used with CNNs?)
+
+### **Experiments:**
+
+* Experiments for Pre-Processing portion:
+	* Max Pooling 2D vs Average Pooling 2D
+	* Input shapes - RGB and Greyscale
+	* What do the Training and Test split distributions look like after removing duplicates? Does this address any slight imbalance in the original dataset? (Yes)
+	* Step to address model’s slight struggle to differentiate between meningioma and glioma?
+	* Alternative Model Experiment:
+	  * Binary Classification model to detect tumor v no tumor
+
+### **Conclusions:**
+
+### **Contributions:**
