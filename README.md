@@ -5,8 +5,8 @@ iSchool Google Drive Link: https://docs.google.com/presentation/d/151mlOsWOUO0_-
 
 ## Overview of Final ML Model Project: Identifying Brain Tumors
 ### **Motivation:**
-  **Question:** Can we train a model to use MRI brain scans to reliably predict the presence of no brain tumor vs. presence of a glioma, meningioma or pituitary tumor?
-  **Importance:** According to the American Brain Tumor Association, approximately 700,000 people in the United States are living with a primary brain tumor, and nearly 80,000 new cases are diagnosed each year.
+  * **Question:** Can we train a model to use MRI brain scans to reliably predict the presence of no brain tumor vs. presence of a glioma, meningioma or pituitary tumor?
+  * **Importance:** According to the American Brain Tumor Association, approximately 700,000 people in the United States are living with a primary brain tumor, and nearly 80,000 new cases are diagnosed each year.
   Magnetic Resonance Imaging (MRI) is one of the most effective and non-invasive tools for brain tumor detection.
   However, the manual analysis of MRI images by radiologists can be time-consuming.
   Despite advancements in medical technology, the five-year survival rate for patients with malignant brain tumors remains low, at around 36%.
