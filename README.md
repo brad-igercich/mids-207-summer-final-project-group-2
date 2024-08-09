@@ -1,7 +1,9 @@
 # mids-207-summer-final-project-group-2
 
+### Authors: Bradley Igercich, Sahana Sankar, Laura Lubben, Chloe McGlynn
+
 ## Baseline Presentation
-iSchool Google Drive Link: https://docs.google.com/presentation/d/151mlOsWOUO0_-WzGq1jwh9FFm3hCE9S9R8waqGN6I_o/edit?usp=sharing
+[iSchool Google Drive Link](https://docs.google.com/presentation/d/151mlOsWOUO0_-WzGq1jwh9FFm3hCE9S9R8waqGN6I_o/edit?usp=sharing)
 
 ## Overview of ML for Brain Tumors: Early Detection for Better Outcomes
 
@@ -14,7 +16,7 @@ iSchool Google Drive Link: https://docs.google.com/presentation/d/151mlOsWOUO0_-
 
 ### **Data:**
 * Data Source:
-  * https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset/data
+  * [Brain MRI Dataset - Kaggle](https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset/data)
   * Combined image datasets from figshare.com & other similar kaggle projects
 * Data Shape:
   * 7023 human brain MRI images total (including no tumor, meningioma, glioma, pituitary)
@@ -67,13 +69,13 @@ iSchool Google Drive Link: https://docs.google.com/presentation/d/151mlOsWOUO0_-
   * Findings indicated that more filters performed worse than a lower filter count of 12 and 24, likely due to increasing complexity with a relatively low number of data points.
  
 ### Repository Organization
-* [DATASCI 207 Final Project Notebooks (ALL)] DATASCI207_FinalProject/Notebooks
-  *  [Data Pre-Processing] DATASCI207_FinalProject/Notebooks/1_Data_Preprocessing.ipynb
-  *  [Baseline Model] DATASCI207_FinalProject/Notebooks/2_Baseline_Model.ipynb
-  *  [CNN] DATASCI207_FinalProject/Notebooks/3_CNN.ipynb
-  *  [Hybrid Model] DATASCI207_FinalProject/Notebooks/4_HybridModel.ipynb
-  *  [Test Predictions] DATASCI207_FinalProject/Notebooks/5_TestPredictions.ipynb
-  *  [Multi-class ROC Analysis] DATASCI207_FinalProject/Notebooks/6_Multi_class_ROC_Analysis_final.ipynb
+* [DATASCI 207 Final Project Notebooks (ALL)](DATASCI207_FinalProject/Notebooks)
+  *  [Data Pre-Processing](DATASCI207_FinalProject/Notebooks/1_Data_Preprocessing.ipynb)
+  *  [Baseline Model](DATASCI207_FinalProject/Notebooks/2_Baseline_Model.ipynb)
+  *  [CNN](DATASCI207_FinalProject/Notebooks/3_CNN.ipynb)
+  *  [Hybrid Model](DATASCI207_FinalProject/Notebooks/4_HybridModel.ipynb)
+  *  [Test Predictions](DATASCI207_FinalProject/Notebooks/5_TestPredictions.ipynb)
+  *  [Multi-class ROC Analysis](DATASCI207_FinalProject/Notebooks/6_Multi_class_ROC_Analysis_final.ipynb)
  
 ### **Conclusions:**
 * The Baseline Model resulted in overfitting to the training data, with a 99% training accuracy and 88% testing accuracy. This model also resulted in lower Recall for 'No Tumor' and 'Meningioma' classes.
