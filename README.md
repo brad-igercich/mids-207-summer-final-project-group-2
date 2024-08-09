@@ -74,3 +74,12 @@ iSchool Google Drive Link: https://docs.google.com/presentation/d/151mlOsWOUO0_-
   
 ### **Contributions:**
   
+| Task                  | Bradley | Sahana | Chloe | Laura |
+|-----------------------|:-------:|:------:|:-----:|:-----:|
+| **Research**          |    x    |   x    |   x   |   x   |
+| **Data Cleaning**      |    x    |   x    |   x   |   x   |
+| **EDA**               |    x    |   x    |   x   |   x   |
+| **Data Preprocessing** |    x    |   x    |   x   |   x   |
+| **Prediction Algorithm**|   x    |   x    |   x   |   x   |
+| **Model Fine Tuning**  |    x    |   x    |   x   |   x   |
+| **Results**           |    x    |   x    |   x   |   x   |
