@@ -3,7 +3,7 @@
 ## Baseline Presentation
 iSchool Google Drive Link: https://docs.google.com/presentation/d/151mlOsWOUO0_-WzGq1jwh9FFm3hCE9S9R8waqGN6I_o/edit?usp=sharing
 
-## Overview of Final ML Model Project: Identifying Brain Tumors
+## Overview of ML for Brain Tumors: Early Detection for Better Outcomes
 
 ### **Motivation:**
   * **Question:** Can we train a model to use MRI brain scans to reliably predict the presence of no brain tumor vs. presence of a glioma, meningioma or pituitary tumor?
@@ -64,8 +64,17 @@ iSchool Google Drive Link: https://docs.google.com/presentation/d/151mlOsWOUO0_-
   * Experimented with hyperparameters on 2-layer and 3-layer CNN models as we increased complexity from baseline.
   * Assessed number of filters and whether they had a significant impact on the performance of the models.
   * Generated simple test to evaluate the performance of the following filter counts on overall validation performance: 12, 24, and 48.
-  * Findings indicated that more filters performed worse than a lower filter count of 12 and 24, likely due to increasing complexity with a relatively low number of data points. 
-
+  * Findings indicated that more filters performed worse than a lower filter count of 12 and 24, likely due to increasing complexity with a relatively low number of data points.
+ 
+### Repository Organization
+* [DATASCI 207 Final Project Notebooks (ALL)] DATASCI207_FinalProject/Notebooks
+  *  [Data Pre-Processing] DATASCI207_FinalProject/Notebooks/1_Data_Preprocessing.ipynb
+  *  [Baseline Model] DATASCI207_FinalProject/Notebooks/2_Baseline_Model.ipynb
+  *  [CNN] DATASCI207_FinalProject/Notebooks/3_CNN.ipynb
+  *  [Hybrid Model] DATASCI207_FinalProject/Notebooks/4_HybridModel.ipynb
+  *  [Test Predictions] DATASCI207_FinalProject/Notebooks/5_TestPredictions.ipynb
+  *  [Multi-class ROC Analysis] DATASCI207_FinalProject/Notebooks/6_Multi_class_ROC_Analysis_final.ipynb
+ 
 ### **Conclusions:**
 * The Baseline Model resulted in overfitting to the training data, with a 99% training accuracy and 88% testing accuracy. This model also resulted in lower Recall for 'No Tumor' and 'Meningioma' classes.
 * Hybrid Model: Pre-Trained CNN + Transformer Layer performed best with 98% training accuracy and 96% testing accuracy.
