@@ -102,8 +102,8 @@ See below for links to each notebook, along with a brief summary:
         * Both configurations were tested over 10 epochs. The results showed no significant difference in validation accuracy between the two methods.
         * However, due to the nature of MRI images, MaxPooling was chosen for further modeling.
       * Results
-        * Validation Accuracy - 
-        * Training Accuracy -  
+        * Validation Accuracy - 88%
+        * Training Accuracy - 99%
   *  [CNN](DATASCI207_FinalProject/Notebooks/3_CNN.ipynb)
       * Import Libraries
       * Load the pre-processed training, validation, and test datasets
@@ -116,9 +116,7 @@ See below for links to each notebook, along with a brief summary:
       * Experimenting with Filters
         * Experimented with different numbers of filters (12, 24, 48) in the 2-layer CNN model to observe the impact on validation accuracy
       * Results
-        * The model with 2 Convolutional layers performed better than that with 3-layers. This is likely due to the fact that adding more complexity into the model with a smaller dataset (~8,000) of images, results in a higher degree of overfitting.
-        * Validation Accuracy - 
-        * Training Accuracy -  
+        * The model with 2 Convolutional layers performed better than that with 3-layers. This is likely due to the fact that adding more complexity into the model with a smaller dataset (~8,000) of images, results in a higher degree of overfitting. 
   *  [Hybrid Model](DATASCI207_FinalProject/Notebooks/4_HybridModel.ipynb)
         * Import Libraries
         * Load the pre-processed training, validation, and test datasets
@@ -140,8 +138,18 @@ See below for links to each notebook, along with a brief summary:
           * Model is trained for 20 epochs with early stopping.
           * Fine-tuning phase set for 20 epochs with early stopping.
         * Results
-          * 
+          * Validation Accuracy - 95%
+          * Training Accuracy - 98%
   *  [Test Predictions](DATASCI207_FinalProject/Notebooks/5_TestPredictions.ipynb)
+        *  Import Libraries
+        *  Load Testing and Training Datasets
+        *  Load Baseline, 2-layer CNN, 3-layer CNN, and Hybrid models
+        *  Evaluate each model
+        *  Construct an Ensemble Model
+           * build_ensemble_model() function combines the best two performing models and averages their predictions into one final prediction.
+           * Ensemble Model Accuracy: 97%
+        *  Results
+           *  The ensemble model reported marginally better accuracy than the hybrid model. Taking into account explainability, we will select the hybrid model as our best performing model overall.
   *  [Multi-class ROC Analysis](DATASCI207_FinalProject/Notebooks/6_Multi_class_ROC_Analysis_final.ipynb)
  
 ### **Conclusions:**
