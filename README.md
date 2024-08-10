@@ -88,8 +88,8 @@
         * Both configurations were tested over 10 epochs. The results showed no significant difference in validation accuracy between the two methods.
         * However, due to the nature of MRI images, MaxPooling was chosen for further modeling.
       * Results
-        * Validation Accuracy - 88%
-        * Training Accuracy - 99% 
+        * Validation Accuracy - 
+        * Training Accuracy -  
   *  [CNN](DATASCI207_FinalProject/Notebooks/3_CNN.ipynb)
       * Import Libraries
       * Load the pre-processed training, validation, and test datasets
