@@ -7,6 +7,14 @@
 
 ## Overview of ML for Brain Tumors: Early Detection for Better Outcomes
 
+Hello, and welcome to our project! Below you will find important information related to the project and our team's work process. This repository is split into two folders: Baseline and Final. Please refer to the Final folder as it has the most recent updates. The folder is split into six individual notebooks, detailing our process to:
+1. Pre-process the raw dataset.
+2. Develop a Baseline model.
+3. Build more complex Convolutional Neural Network (CNN) models.
+4. Build a final, "hybrid" (CNN + Transformer) model.
+5. Test each model using unseen (test) data.
+6. Analyze results.
+
 ### **Motivation:**
   * **Question:** Can we train a model to use MRI brain scans to reliably predict the presence of no brain tumor vs. presence of a glioma, meningioma or pituitary tumor?
   * **Importance:**
@@ -16,20 +24,22 @@
 
 ### **Data:**
 * Data Source:
-  * [Brain MRI Dataset - Kaggle](https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset/data)
-  * Combined image datasets from figshare.com & other similar kaggle projects
+  * The MRI images used in this project can be found on Kaggle here: [Brain MRI Dataset - Kaggle](https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset/data)
+  * This dataset was the result of several individual combined image datasets from figshare.com & other kaggle projects.
 * Data Shape:
-  * 7023 human brain MRI images total (including no tumor, meningioma, glioma, pituitary)
-  * 1621 images featuring a glioma
-  * 1645 images featuring a meningioma
+  * 7023 human brain MRI images total (including 'no tumor,' 'meningioma,' 'glioma,' and 'pituitary' classes)
+  * 1621 images featuring a glioma tumor
+  * 1645 images featuring a meningioma tumor
   * 1757 images featuring a pituitary tumor
   * 2000 images featuring no tumor
 * Main Features:
   * Greyscale color // color values
   * 224 x 224 pixels // pixel labels
-  * Scan orientation
+  * Scan orientations are different
 
 ### **Models:**
+We built four different models to detect the presence brain tumors. The first model, or baseline model, is a simple Convolutional Neural Network (CNN) against which we can compare the results of all other models. From there, we built up in complexity, adding two and three convolutional layers to the baseline model. Finally, to improve results further, we combined a pre-trained CNN (MobileNetV2) with a transformer layer to achieve the best results. You can find a brief summary of each model structure below:
+
 * Baseline CNN Model
   * Single Conv2D layer (ReLU)
   * MaxPooling2D layer
@@ -59,6 +69,8 @@
   * Dense Layer (Softmax)
 
 ### **Experiments:**
+In order to determine the best hyperparameters for our models, we conducted the following experiments:
+
 * MaxPooling vs AveragePooling
   * Tested if MaxPooling or AveragePooling layers produced better results when adding complexity to Baseline model.
   * Findings indicated that there was no real difference between two, but we chose to keep the MaxPooling layer to emphasize the pixel values corresponding to tumors in the MRI scans.
@@ -69,14 +81,16 @@
   * Findings indicated that more filters performed worse than a lower filter count of 12 and 24, likely due to increasing complexity with a relatively low number of data points.
  
 ### Repository Organization
+See below for links to each notebook, along with a brief summary:
 * [DATASCI 207 Final Project Notebooks (ALL)](DATASCI207_FinalProject/Notebooks)
   *  [Data Pre-Processing](DATASCI207_FinalProject/Notebooks/1_Data_Preprocessing.ipynb)
       * Import Libraries
       * Download and Unzip Dataset from Kaggle
       * Exploratory Data Analysis:
-        * Displayed the first five MRI images from each class.
+        * Examined example MRI images from each class.
+        * Split data into training, validation, and test datasets.
         * Counted and visualized the distribution of images in the training and testing datasets.
-        * Check for Duplicate Images:
+        * Removed Duplicate Images:
           * Implemented functions to compute file hashes and remove duplicates based on these hashes.
           * Displayed file counts before and after removing duplicates.
   *  [Baseline Model](DATASCI207_FinalProject/Notebooks/2_Baseline_Model.ipynb)
@@ -111,9 +125,9 @@
  
 ### **Conclusions:**
 * The Baseline Model resulted in overfitting to the training data, with a 99% training accuracy and 88% testing accuracy. This model also resulted in lower Recall for 'No Tumor' and 'Meningioma' classes.
-* Hybrid Model: Pre-Trained CNN + Transformer Layer performed best with 98% training accuracy and 96% testing accuracy.
-* The Hybrid Model improved 'Meningioma' Recall, 'No Tumor' Recall, and F1 Scores for all classes.
-* Despite advancements, the Hybrid Model still struggled to correctly predict the presence of 'Meningioma' when compared to other classes, with a Recall of 91% and an F1 score of 93%.
+* Hybrid Model: Pre-Trained CNN + Transformer Layer performed best with 98% training accuracy and 96% testing accuracy (minimal overfitting).
+* The Hybrid Model also improved 'Meningioma' Recall, 'No Tumor' Recall, and F1 Scores for all classes.
+* Despite advancements, the Hybrid Model still struggled the most when predicting the presence of 'Meningioma' when compared to other classes, with a Recall of 91% and an F1 score of 93%.
   
 ### **Contributions:**
   
