@@ -116,10 +116,31 @@ See below for links to each notebook, along with a brief summary:
       * Experimenting with Filters
         * Experimented with different numbers of filters (12, 24, 48) in the 2-layer CNN model to observe the impact on validation accuracy
       * Results
-        * 2-layer CNN model outperformed the 3-layer model, suggesting that increasing the number of layers does not always result in better performance, especially with a smaller dataset
-        * Validation Accuracy - 88%
-        * Training Accuracy - 99% 
+        * The model with 2 Convolutional layers performed better than that with 3-layers. This is likely due to the fact that adding more complexity into the model with a smaller dataset (~8,000) of images, results in a higher degree of overfitting.
+        * Validation Accuracy - 
+        * Training Accuracy -  
   *  [Hybrid Model](DATASCI207_FinalProject/Notebooks/4_HybridModel.ipynb)
+        * Import Libraries
+        * Load the pre-processed training, validation, and test datasets
+        * Base Model: MobileNetV2
+           * Pre-trained Weights: The model utilizes the MobileNetV2 architecture, pre-trained on the ImageNet dataset.
+              * Input Shape: (224, 224, 3)
+              * Top Layer Excluded
+              * Frozen Layers
+        * Transformer Layer
+          * Reshape Layer: MobileNetV2 output is reshaped to (7x7, 1280)
+          * Multi-Head Attention: 4 heads and a key dimension of 1280.
+          * Reshape Back: The output is reshaped back to (7, 7, 1280)
+        * Custom Layers
+          * GlobalAveragePooling
+          * Dropout Layer (0.5)
+          * Dense Layer with ReLU activation and L2 regularization
+          * Output Layer: Dense layer with 4 units and softmax function
+        * Training Phase
+          * Model is trained for 20 epochs with early stopping.
+          * Fine-tuning phase set for 20 epochs with early stopping.
+        * Results
+          * 
   *  [Test Predictions](DATASCI207_FinalProject/Notebooks/5_TestPredictions.ipynb)
   *  [Multi-class ROC Analysis](DATASCI207_FinalProject/Notebooks/6_Multi_class_ROC_Analysis_final.ipynb)
  
@@ -134,7 +155,7 @@ See below for links to each notebook, along with a brief summary:
 | Task                  | Bradley | Sahana | Chloe | Laura |
 |-----------------------|:-------:|:------:|:-----:|:-----:|
 | **Research**          |    x    |   x    |   x   |   x   |
-| **Data Cleaning**      |    x    |   x    |   x   |   x   |
+| **Data Cleaning**     |    x    |   x    |   x   |   x   |
 | **EDA**               |    x    |   x    |   x   |   x   |
 | **Data Preprocessing** |    x    |   x    |   x   |   x   |
 | **Prediction Algorithm**|   x    |   x    |   x   |   x   |
