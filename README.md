@@ -151,6 +151,12 @@ See below for links to each notebook, along with a brief summary:
         *  Results
            *  The ensemble model reported marginally better accuracy than the hybrid model. Taking into account explainability, we will select the hybrid model as our best performing model overall.
   *  [Multi-class ROC Analysis](DATASCI207_FinalProject/Notebooks/6_Multi_class_ROC_Analysis_final.ipynb)
+      *  Prepare Data: Convert the multiclass labels into a binary format for analysis.
+      *  Compute ROC and AUC: Calculate ROC curves and AUC scores for each class using a One versus Rest strategy (OvR)
+      *  Compute both micro-averaged and macro-averaged AUC scores to evaluate overall model performance.
+      *  Plotting Curves: Plot the ROC curves for each class and the averaged ROC curves to visualize the model's performance.
+      *  Validate Results: Incorporate checks of the model outputs, calibration curves, and probability distributions to assess integrity of analysis.
+      *  SHAP Analysis: The hybrid model greatly improves the recall and F1 scores from our baseline model, bu5 we find that Meningioma is the class of tumor that the model confuses the most. We use Shapley Additive Explanations (SHAP) to visualize why this is happening. 
  
 ### **Conclusions:**
 * The Baseline Model resulted in overfitting to the training data, with a 99% training accuracy and 88% testing accuracy. This model also resulted in lower Recall for 'No Tumor' and 'Meningioma' classes.
