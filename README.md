@@ -82,10 +82,6 @@
   *  [Baseline Model](DATASCI207_FinalProject/Notebooks/2_Baseline_Model.ipynb)
       * Import Libraries
       * Baseline Model is constructed using build_baseline_model function
-        * 1 Conv2D layer
-        * 1 MaxPooling layer
-        * 1 Dropout layer
-        * 1 Dense output layer
         * Model is trained for 20 epochs with early stopping if the validation accuracy doesn't improve for 4 consecutive epochs.
         * Model is evaluated on both the training and validation datasets.
       * MaxPooling vs AveragePooling
@@ -95,6 +91,20 @@
         * Validation Accuracy - 88%
         * Training Accuracy - 99% 
   *  [CNN](DATASCI207_FinalProject/Notebooks/3_CNN.ipynb)
+      * Import Libraries
+      * Load the pre-processed training, validation, and test datasets
+      * 2-Layer CNN is constructed
+        * Model is trained for 20 epochs with early stopping.
+        * Model is evaluated on both the training and validation datasets.
+      * 3-layer CNN is constructed 
+        * Model is trained for 20 epochs with early stopping.
+        * Model is evaluated on both the training and validation datasets.
+      * Experimenting with Filters
+        * Experimented with different numbers of filters (12, 24, 48) in the 2-layer CNN model to observe the impact on validation accuracy
+      * Results
+        * 2-layer CNN model outperformed the 3-layer model, suggesting that increasing the number of layers does not always result in better performance, especially with a smaller dataset
+        * Validation Accuracy - 88%
+        * Training Accuracy - 99% 
   *  [Hybrid Model](DATASCI207_FinalProject/Notebooks/4_HybridModel.ipynb)
   *  [Test Predictions](DATASCI207_FinalProject/Notebooks/5_TestPredictions.ipynb)
   *  [Multi-class ROC Analysis](DATASCI207_FinalProject/Notebooks/6_Multi_class_ROC_Analysis_final.ipynb)
