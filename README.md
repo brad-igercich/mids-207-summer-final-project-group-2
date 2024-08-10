@@ -71,7 +71,29 @@
 ### Repository Organization
 * [DATASCI 207 Final Project Notebooks (ALL)](DATASCI207_FinalProject/Notebooks)
   *  [Data Pre-Processing](DATASCI207_FinalProject/Notebooks/1_Data_Preprocessing.ipynb)
+      * Import Libraries
+      * Download and Unzip Dataset from Kaggle
+      * Exploratory Data Analysis:
+        * Displayed the first five MRI images from each class.
+        * Counted and visualized the distribution of images in the training and testing datasets.
+        * Check for Duplicate Images:
+          * Implemented functions to compute file hashes and remove duplicates based on these hashes.
+          * Displayed file counts before and after removing duplicates.
   *  [Baseline Model](DATASCI207_FinalProject/Notebooks/2_Baseline_Model.ipynb)
+      * Import Libraries
+      * Baseline Model is constructed using build_baseline_model function
+        * 1 Conv2D layer
+        * 1 MaxPooling layer
+        * 1 Dropout layer
+        * 1 Dense output layer
+        * Model is trained for 20 epochs with early stopping if the validation accuracy doesn't improve for 4 consecutive epochs.
+        * Model is evaluated on both the training and validation datasets.
+      * MaxPooling vs AveragePooling
+        * Both configurations were tested over 10 epochs. The results showed no significant difference in validation accuracy between the two methods.
+        * However, due to the nature of MRI images, MaxPooling was chosen for further modeling.
+      * Results
+        * Validation Accuracy - 88%
+        * Training Accuracy - 99% 
   *  [CNN](DATASCI207_FinalProject/Notebooks/3_CNN.ipynb)
   *  [Hybrid Model](DATASCI207_FinalProject/Notebooks/4_HybridModel.ipynb)
   *  [Test Predictions](DATASCI207_FinalProject/Notebooks/5_TestPredictions.ipynb)
